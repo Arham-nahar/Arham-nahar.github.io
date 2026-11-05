@@ -130,10 +130,17 @@
   .thesis-item + .thesis-item{border-top:1px solid var(--rule);}
   .thesis-chapter{font-family:var(--mono);font-size:.78rem;color:var(--ink-muted);margin-bottom:.6rem;}
   .jmp-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;letter-spacing:.02em;margin:0 0 .8rem;}
-  .thesis-item h3{font-size:1.15rem;font-weight:600;margin:0 0 .4rem;max-width:39rem;text-wrap:balance;} /* a long title wraps inside the abstract column, in even lines */
+  .thesis-item h3{font-size:1.15rem;font-weight:600;margin:0 0 .4rem;text-wrap:balance;} /* a long title breaks into even lines */
   .thesis-authors{font-size:.88rem;color:var(--ink-muted);margin-bottom:1rem;}
   .thesis-abstract-label{font-size:.72rem;font-weight:600;color:var(--ink-muted);margin-bottom:.4rem;letter-spacing:.03em;}
-  .thesis-abstract{font-size:.95rem;max-width:var(--measure);text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+  .thesis-abstract{font-size:.95rem;text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+  /* From 701px up, each chapter uses the same two columns as the CV: the chapter label on the left, the text filling the rest. */
+  @media (min-width:701px){
+    .thesis-item{display:grid;grid-template-columns:140px minmax(0,1fr);column-gap:1.25rem;align-items:baseline;}
+    .thesis-item > *{grid-column:2;}
+    .thesis-item > .thesis-chapter{grid-column:1;margin-bottom:0;}
+    .thesis-item > .jmp-badge{grid-column:1;grid-row:2 / span 3;align-self:start;justify-self:start;margin:0;}
+  }
 
   /* Publications */
   .pub-group + .pub-group{margin-top:2rem;}
