@@ -74,7 +74,7 @@
   .section-title{font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.8rem);font-weight:600;line-height:1.2;margin:0 0 .6rem;text-wrap:balance;}
   .section-rule{width:46px;height:3px;background:var(--gold);margin:0 0 1.9rem;border-radius:1px;}
 
-  /* About: portrait, university and links in the left column; name, fields, About text and the job market paper beside it. */
+  /* About: portrait, university and links in the left column; name, fields, the job market paper and the About text beside it. */
   .home{display:grid;grid-template-columns:144px minmax(0,1fr);gap:2.5rem;align-items:start;}
   .home-aside,.home-main{min-width:0;}
   .home-photo{padding-top:.25rem;}
@@ -99,17 +99,17 @@
   .fields-list{list-style:none;padding:0;margin:0;font-size:.98rem;line-height:1.6;text-wrap:balance;}
   .fields-list li{display:inline;white-space:nowrap;}
   .fields-list li:not(:last-child)::after{content:"\00a0\00b7";color:var(--gold);font-weight:600;}
-  .home-about{margin-top:1.9rem;}
+  .home-about{margin-top:2.25rem;}
   .home-about p{max-width:var(--measure);text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
 
   /* Job market paper: a grey panel with a gold left edge, a bronze label, then the title and links. */
-  .jmp{margin-top:2.25rem;max-width:var(--measure);background:var(--wash);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:1.1rem 1.3rem 1.15rem;}
+  .jmp{margin-top:1.9rem;max-width:var(--measure);background:var(--wash);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:1.1rem 1.3rem 1.15rem;}
   .jmp-label{font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--gold-text);}
   .jmp-title{font-family:var(--serif);font-size:1.25rem;font-weight:600;line-height:1.3;margin:.3rem 0 .45rem;}
   .jmp-links{display:flex;flex-wrap:wrap;gap:.3rem 1.3rem;margin-top:.8rem;font-size:.9rem;font-weight:500;}
 
   @media (max-width:700px){
-    .home{grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto 1fr auto auto auto auto;column-gap:1.1rem;row-gap:0;grid-template-areas:"photo name" "photo affil" "links links" "fields fields" "about about" "jmp jmp";}
+    .home{grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto 1fr auto auto auto auto;column-gap:1.1rem;row-gap:0;grid-template-areas:"photo name" "photo affil" "links links" "fields fields" "jmp jmp" "about about";}
     .home-aside,.home-main{display:contents;}
     .home-photo{grid-area:photo;padding-top:.3rem;}
     .portrait{width:96px;}
@@ -120,8 +120,8 @@
     .home-affil{grid-area:affil;margin-top:.9rem;}
     .home-links{grid-area:links;display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;margin-top:1.5rem;padding-top:1rem;}
     .home-fields{grid-area:fields;margin-top:1.5rem;}
-    .home-about{grid-area:about;margin-top:1.5rem;}
-    .jmp{grid-area:jmp;margin-top:1.75rem;}
+    .home-about{grid-area:about;margin-top:1.75rem;}
+    .jmp{grid-area:jmp;margin-top:1.5rem;}
   }
 
   /* PhD Thesis */
@@ -130,7 +130,7 @@
   .thesis-item + .thesis-item{border-top:1px solid var(--rule);}
   .thesis-chapter{font-family:var(--mono);font-size:.78rem;color:var(--ink-muted);margin-bottom:.6rem;}
   .jmp-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;letter-spacing:.02em;margin:0 0 .8rem;}
-  .thesis-item h3{font-size:1.15rem;font-weight:600;margin:0 0 .4rem;}
+  .thesis-item h3{font-size:1.15rem;font-weight:600;margin:0 0 .4rem;max-width:39rem;text-wrap:balance;} /* a long title wraps inside the abstract column, in even lines */
   .thesis-authors{font-size:.88rem;color:var(--ink-muted);margin-bottom:1rem;}
   .thesis-abstract-label{font-size:.72rem;font-weight:600;color:var(--ink-muted);margin-bottom:.4rem;letter-spacing:.03em;}
   .thesis-abstract{font-size:.95rem;max-width:var(--measure);text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
@@ -240,15 +240,15 @@
             <li>Time Series Econometrics</li>
           </ul>
         </div>
-        <div class="home-about">
-          <h2 class="sr-only">About</h2>
-          <p>My research examines the dynamics of inflation across advanced and emerging economies, spanning its cyclical, structural, and policy dimensions. The work sits at the intersection of monetary and international economics: it uses structural VARs and local projections to empirically identify the drivers of inflation, and open-economy DSGE models to theoretically test them, across both country groups.</p>
-          <p>Separately, I have worked on structural trade models to examine the effects of trade agreements, and used input-output analysis to estimate the size of India's digital economy. Going forward, I plan to extend this research using Heterogeneous Agent New Keynesian (HANK) models and Bayesian econometric methods to better capture how household heterogeneity shapes the transmission of inflation and monetary policy.</p>
-        </div>
         <div class="jmp">
           <div class="jmp-label">Job market paper</div>
           <div class="jmp-title">Two-Channel Transmission of Global Inflation Shock</div>
           <div class="jmp-links"><a href="arham-nahar-job-market-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a><a href="#phd-thesis">Abstract</a></div>
+        </div>
+        <div class="home-about">
+          <h2 class="sr-only">About</h2>
+          <p>My research examines the dynamics of inflation across advanced and emerging economies, spanning its cyclical, structural, and policy dimensions. The work sits at the intersection of monetary and international economics: it uses structural VARs and local projections to empirically identify the drivers of inflation, and open-economy DSGE models to theoretically test them, across both country groups.</p>
+          <p>Separately, I have worked on structural trade models to examine the effects of trade agreements, and used input-output analysis to estimate the size of India's digital economy. Going forward, I plan to extend this research using Heterogeneous Agent New Keynesian (HANK) models and Bayesian econometric methods to better capture how household heterogeneity shapes the transmission of inflation and monetary policy.</p>
         </div>
       </div>
     </div>
@@ -345,7 +345,6 @@
           <div>
             <div class="cv-role">Graduate Teaching Assistant</div>
             <div class="cv-org">School of Economics and Finance, University of St&nbsp;Andrews</div>
-            <div class="cv-note">Courses: EC1001 Macroeconomics, EC1008 Finance, EC1003 Mathematics for Economists</div>
           </div>
         </div>
         <div class="cv-entry">
@@ -353,7 +352,6 @@
           <div>
             <div class="cv-role">Research Intern</div>
             <div class="cv-org">Reserve Bank of India, Mumbai</div>
-            <div class="cv-note">Co-authored a paper on measuring India's digital economy. Built a structural general equilibrium gravity model of a counterfactual trade agreement between the Quad countries. Drafted policy briefs on Quantum Computing, Rare Earth, Robotics, Cement and the Automobile Industry.</div>
           </div>
         </div>
 
