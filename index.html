@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Arham Nahar</title>
 <meta name="description" content="Economics PhD candidate researching inflation dynamics across advanced and emerging economies.">
@@ -28,16 +29,7 @@
     --mono:'IBM Plex Mono', 'SF Mono', Consolas, monospace;
     --measure:64ch;
     --bar-h:64px;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#0E0F12; --ink:#E7E7E4; --ink-muted:#9A9CA6; --rule:#2A2C33; --wash:#17191E; --navy:#1B2338; --navy-ink:#F0F1F5; --navy-muted:#9DA3BE; --gold:#D8AE5C; --gold-text:#D8AE5C; --gold-soft:#33291B;
-      color-scheme:dark;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#0E0F12; --ink:#E7E7E4; --ink-muted:#9A9CA6; --rule:#2A2C33; --wash:#17191E; --navy:#1B2338; --navy-ink:#F0F1F5; --navy-muted:#9DA3BE; --gold:#D8AE5C; --gold-text:#D8AE5C; --gold-soft:#33291B;
-    color-scheme:dark;
+    color-scheme:light; /* light only: the site deliberately has no dark mode */
   }
 
   *{box-sizing:border-box;}
@@ -108,7 +100,7 @@
   .fields-list li{display:inline;white-space:nowrap;}
   .fields-list li:not(:last-child)::after{content:"\00a0\00b7";color:var(--gold);font-weight:600;}
   .home-about{margin-top:1.9rem;}
-  .home-about p{max-width:var(--measure);}
+  .home-about p{max-width:var(--measure);text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
 
   /* Job market paper: a grey panel with a gold left edge, a bronze label, then the title and links. */
   .jmp{margin-top:2.25rem;max-width:var(--measure);background:var(--wash);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:1.1rem 1.3rem 1.15rem;}
@@ -226,7 +218,7 @@
         <div class="home-affil">
           <div class="affil-role">PhD Candidate, Economics</div>
           <div class="affil-org">University of St Andrews</div>
-          <div class="affil-status ph"><span class="dot" aria-hidden="true"></span>[On the job market, 2026–27]</div>
+          <div class="affil-status"><span class="dot" aria-hidden="true"></span>On the job market, 2026–27</div>
         </div>
         <ul class="home-links">
           <li><a href="mailto:arham-nahar@outlook.com">arham-nahar<wbr>@outlook.com</a></li>
@@ -274,7 +266,7 @@
         <h3>Two-Channel Transmission of Global Inflation Shock</h3>
         <div class="thesis-authors">Arham Nahar</div>
         <div class="thesis-abstract-label">Abstract</div>
-        <p class="thesis-abstract">This paper examines the two-channel transmission of a global inflation shock to CPI inflation in emerging economies. A high frequency external instrument identification strategy, following \cite{Kanzig}, is employed to empirically test the impact of the global inflation shock on the relevant nominal exchange rate. Thereafter a three bloc open economy dynamic stochastic general equilibrium (DSGE) model is then constructed to theoretically examine the multi-regional spillover impact of a global inflation shock. The paper finds opposing price pressures emanating from the factors of production, with the cost of composite intermediate goods exerting upward price pressure while downward price pressure is exerted owing to a fall in wages. Evidence is also found for the existence of an indirect channel of the global inflation shock, which operates through changes in the relevant nominal exchange rate following the shock. The indirect channel either amplifies or dampens the direct channel, depending on the direction of the exchange rate change induced by the global inflation shock. The paper further identifies the importance of currency invoicing, the degree of exchange rate pass-through, and trade structure as key channels through which global inflation shocks are transmitted to domestic prices in Emerging Economies.</p>
+        <p class="thesis-abstract">This paper examines the two-channel transmission of a global inflation shock to CPI inflation in emerging economies. A high frequency external instrument identification strategy, following Känzig (2021), is employed to empirically test the impact of the global inflation shock on the relevant nominal exchange rate. Thereafter a three bloc open economy dynamic stochastic general equilibrium (DSGE) model is then constructed to theoretically examine the multi-regional spillover impact of a global inflation shock. The paper finds opposing price pressures emanating from the factors of production, with the cost of composite intermediate goods exerting upward price pressure while downward price pressure is exerted owing to a fall in wages. Evidence is also found for the existence of an indirect channel of the global inflation shock, which operates through changes in the relevant nominal exchange rate following the shock. The indirect channel either amplifies or dampens the direct channel, depending on the direction of the exchange rate change induced by the global inflation shock. The paper further identifies the importance of currency invoicing, the degree of exchange rate pass-through, and trade structure as key channels through which global inflation shocks are transmitted to domestic prices in Emerging Economies.</p>
       </div>
 
       <div class="thesis-item">
@@ -344,6 +336,24 @@
           <div>
             <div class="cv-role">B.Com (Honours)</div>
             <div class="cv-org">University of Delhi</div>
+          </div>
+        </div>
+
+        <h3 class="cv-sub">Relevant experience</h3>
+        <div class="cv-entry">
+          <div class="cv-year">2023-2025</div>
+          <div>
+            <div class="cv-role">Graduate Teaching Assistant</div>
+            <div class="cv-org">School of Economics and Finance, University of St&nbsp;Andrews</div>
+            <div class="cv-note">Courses: EC1001 Macroeconomics, EC1008 Finance, EC1003 Mathematics for Economists</div>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-year">2021-2022</div>
+          <div>
+            <div class="cv-role">Research Intern</div>
+            <div class="cv-org">Reserve Bank of India, Mumbai</div>
+            <div class="cv-note">Co-authored a paper on measuring India's digital economy. Built a structural general equilibrium gravity model of a counterfactual trade agreement between the Quad countries. Drafted policy briefs on Quantum Computing, Rare Earth, Robotics, Cement and the Automobile Industry.</div>
           </div>
         </div>
 
